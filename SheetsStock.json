@@ -1,0 +1,68 @@
+{
+	"id": "com.fd.googlesheetsstock",
+	"version": "1.0.0",
+	"name": "Google Sheets Stock",
+	"description": "A Google Sheets Stock demo",
+	"newInstancePrefix": "Googlesheetsstock",
+	"icon": "http://localhost/SAC/sacgooglesheetstock/box/icon.png",
+	"vendor": "FD",
+	"eula": "EULA",
+	"license": "2.0",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-fd-googlesheetsstock",
+			"url": "http://localhost/SAC/sacgooglesheetstock/box/box.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"value": {
+			"type": "string",
+			"description": "value",
+			"default": ""
+		},
+		"formula": {
+			"type": "string",
+			"description": "formula",
+			"default": ""
+		},
+		"width": {
+			"type": "integer",
+			"default": 50
+		},
+		"height": {
+			"type": "integer",
+			"default": 50
+		}
+	},
+	"methods": {
+		"setValue": {
+			"description": "Sets the Google Sheets Stock value.",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "string",
+					"description": "Google Sheets Value"
+				},
+				{
+					"name": "newFormula",
+					"type": "string",
+					"description": "Google Sheets Formula"
+				}
+			],
+			"body": "this.value = newValue; this.formula = newFormula;"
+		},
+		"getValue": {
+			"returnType": "string",
+			"description": "Returns the Google Sheets Stock value.",
+			"body": "return this.value;"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Box."
+		}
+	}
+}

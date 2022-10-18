@@ -1,0 +1,47 @@
+{
+    "eula": "",
+    "vendor": "OMIK",
+    "license": "",
+    "id": "com.sap.sac.sample.echarts.prepared",
+    "version": "1.0.1",
+    "name": "ECharts",
+    "newInstancePrefix": "EChartPrepared",
+    "description": "A sample custom widget wrapped EChart Prepared",
+    "icon": "https://9e17-2405-201-2014-3948-f505-e837-4ac2-c1e9.ngrok.io/Static/plus.png",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-sap-sample-echarts-prepared",
+        "url": "https://9e17-2405-201-2014-3948-f505-e837-4ac2-c1e9.ngrok.io/Static/main.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {
+          "width": {
+              "type": "integer",
+              "default": 600
+          },
+          "height": {
+              "type": "integer",
+              "default": 420
+          }
+    },
+    "methods": {
+        "render": {
+        "description": "Render",
+        "parameters": [
+            {
+                "name": "resultSet",
+                "type": "any",
+                "description": "The json"
+            }
+        ]
+                    }
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the Box."
+          }
+    }
+  }
