@@ -1,0 +1,48 @@
+{
+	"eula": "",
+	"vendor": "OMIK",
+	"license": "",
+	"id": "com.sap.sac.sample.line_area.prepared",
+	"version": "4.4.4",
+	"name": "LineArea4",
+	"newInstancePrefix": "LineArea",
+	"icon": "https://omiklakhani1.github.io/Custom_widget.github.io/lineee.png",
+	"description": "LineArea",
+	"webcomponents": [
+	  {
+		"kind": "main",
+		"tag": "com-sap-sample-linearea-prepared",
+		"url": "https://omiklakhani1.github.io/Custom_widget.github.io/line_area.js",
+		"integrity": "",
+		"ignoreIntegrity": true
+	  }
+	 
+	],
+	
+	"properties": {
+		  "width": {"type": "integer","default": 600},
+		  "height": {"type": "integer","default": 420 }
+	},
+
+	"methods": {
+				"render":{
+							"description": "Render",
+							"parameters":[ {
+								"name": "resultset",
+								"type": "any",
+								"description": "The json"
+							}]
+						}
+				
+					},
+		
+				
+					"events": {
+						"onClick": {
+									 "description": "Called when the user clicks the Box."
+								   }
+								   
+								   
+				}
+	  }		  
+				

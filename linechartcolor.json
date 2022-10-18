@@ -1,0 +1,44 @@
+{
+	"eula": "",
+	"vendor": "OMIK",
+	"license": "",
+	"id": "com.sap.sac.sample.line_area.color1",
+	"version": "1.0.1",
+	"name": "LineAreacolor",
+	"newInstancePrefix": "LineAreacolor",
+	"icon": "https://omiklakhani1.github.io/Custom_widget.github.io/linechartcolor.png",
+	"description": "Called when the user clicks the Box.",
+	"webcomponents": [
+	  {
+		"kind": "main",
+		"tag": "com-sap-sample-lineareacolor-prepared",
+		"url": "https://omiklakhani1.github.io/Custom_widget.github.io/linechartcolor.js",
+		"integrity": "",
+		"ignoreIntegrity": true
+	  }
+	 
+	],
+	
+	"properties": {
+		  "width": {"type": "integer","default": 600},
+		  "height": {"type": "integer","default": 420 }
+	},
+
+	"methods": {
+				"render":{
+							"description": "Render",
+							"parameters":[]
+						}
+				
+					},
+		
+				
+					"events": {
+						"onClick": {
+									 "description": "Called when the user clicks the Box."
+								   }
+								   
+								   
+				}
+	  }		  
+				
