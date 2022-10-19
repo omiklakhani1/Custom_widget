@@ -2,7 +2,7 @@
     "eula": "",
     "vendor": "OMIK",
     "license": "",
-    "id": "com.sap.sac.sample.echarts.prepared12",
+    "id": "com.sap.sac.sample.StackedAreaChart",
     "version": "1.0.1",
     "name": "Stacked Area Chart",
     "newInstancePrefix": "StackedAreaChart",
