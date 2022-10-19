@@ -43,8 +43,8 @@ var getScriptPromisify = (src) => {
       // await getScriptPromisify('https://cdn.amcharts.com/lib/5/radar.js');       
       // await getScriptPromisify('https://cdn.amcharts.com/lib/5/themes/Animated.js');
      
- var dom = document.getElementById('chart-container');
-var myChart = echarts.init(dom, null, {
+ var dom = document.getElementById(this._root);
+var myChart = echarts.init(dom, {
   renderer: 'canvas',
   useDirtyRect: false
 });
