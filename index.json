@@ -12,7 +12,7 @@
       {
         "kind": "main",
         "tag": "com-sap-sample-echarts-prepared",
-        "url": "https://omiklakhani1.github.io/Custom_widget.github.sio/main.js",
+        "url": "https://omiklakhani1.github.io/Custom_widget.github.io/main.js",
         "integrity": "",
         "ignoreIntegrity": true
       }
@@ -30,18 +30,12 @@
     "methods": {
         "render": {
         "description": "Render",
-        "parameters": [
-            {
-                "name": "resultSet",
-                "type": "any",
-                "description": "The json"
-            }
-        ]
+        "parameters": []
                     }
     },
     "events": {
         "onClick": {
-            "description": "Called when the user clicks the Box."
+            "description": "Called when the user clicks the Boxx."
           }
     }
   }
