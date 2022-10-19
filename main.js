@@ -243,5 +243,5 @@ window.addEventListener('resize', myChart.resize);
  
     }
   }
-  customElements.define('com-sap-sample-stepline', SamplePrepared2)
+  customElements.define('com-sap-sample-echarts-prepared', SamplePrepared2)
 })()
