@@ -5,49 +5,45 @@ var getScriptPromisify = (src) => {
 }
 
 (function () {
+
+  //Chart Block in HTML
   const prepared = document.createElement('template')
   prepared.innerHTML = `
-      <style>
-      </style>
-      <div id="root" style="width: 100%; height: 100%;">
+      <div id="root" style="height: 100vh; overflow: hidden; position: relative;">
+      
       </div>
+
+      
     `
-  class SamplePrepared extends HTMLElement {
-    constructor () {
+  //Main JS Class holds methods to be called
+  class SamplePrepared2 extends HTMLElement {
+    constructor() {
+
+      //call SAC DOM Super method to get shadow DOM information
       super()
 
+      //Get shadow DOM informations
       this._shadowRoot = this.attachShadow({ mode: 'open' })
       this._shadowRoot.appendChild(prepared.content.cloneNode(true))
 
+      //Set HTML block in shadow DOM of SAC
       this._root = this._shadowRoot.getElementById('root')
 
+      //_props object is used to hold properties infosrmation
       this._props = {}
 
+      //Call render() method to plot chart
       this.render()
     }
 
-    onCustomWidgetResize (width, height) {var styles = {
-
-      //*
-          Element: {
-                  margin: "0",
-                  padding: "0"
-          },
-      //#chart-container
-          chartContainerId: {
-                  position: "relative",
-                  height: "100vh",
-                  overflow: "hidden"
-          }
-      }
-      this.render()
-    }
-
-    async render () {
-      await getScriptPromisify('https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js')
-
-        
-var root = am5.Root.new(this._root);
+    //render() method to plot chart - resultSet1 holds data from SAC table/chart.
+    async render() {
+      await getScriptPromisify('https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js');
+      // await getScriptPromisify('https://cdn.amcharts.com/lib/5/xy.js');
+      // await getScriptPromisify('https://cdn.amcharts.com/lib/5/radar.js');       
+      // await getScriptPromisify('https://cdn.amcharts.com/lib/5/themes/Animated.js');
+     
+ var dom = document.getElementById('chart-container');
 var myChart = echarts.init(dom, null, {
   renderer: 'canvas',
   useDirtyRect: false
@@ -244,15 +240,8 @@ if (option && typeof option === 'object') {
 }
 
 window.addEventListener('resize', myChart.resize);
-      const chart = echarts.init(this._root)
-      const option = {
-        // https://echarts.apache.org/examples/zh/index.html
-      }
-      chart.setOption(option)
+ 
     }
   }
-
-  customElements.define('com-sap-sample-echarts-prepared', SamplePrepared)
+  customElements.define('com-sap-sample-stepline', SamplePrepared2)
 })()
-  
-  
