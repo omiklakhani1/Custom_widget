@@ -2,10 +2,10 @@
     "eula": "",
     "vendor": "OMIK",
     "license": "",
-    "id": "com.sap.sac.sample.echarts.prepared",
+    "id": "com.sap.sac.sample.echarts.prepared12",
     "version": "1.0.1",
-    "name": "ECharts",
-    "newInstancePrefix": "EChartPrepared",
+    "name": "ECharts12",
+    "newInstancePrefix": "EChartPrepared12",
     "description": "A sample custom widget wrapped EChart Prepared",
     "icon": "https://omiklakhani1.github.io/Custom_widget.github.io/plus.png",
     "webcomponents": [
