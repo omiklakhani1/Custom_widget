@@ -41,7 +41,9 @@ var getScriptPromisify = (src) => {
       }
   
       async render () {
-        await getScriptPromisify('https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js')
+        await getScriptPromisify('https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js')
+       
+       
         var dom = document.getElementById('chart-container');
         var myChart = echarts.init(dom, null, {
           renderer: 'canvas',
@@ -234,16 +236,7 @@ var getScriptPromisify = (src) => {
           ]
         };
         
-        if (option && typeof option === 'object') {
-          myChart.setOption(option);
-        }
-        
-        window.addEventListener('resize', myChart.resize);
-        const chart = echarts.init(this._root)
-        const option = {
-          // https://echarts.apache.org/examples/zh/index.html
-        }
-        chart.setOption(option)
+      
       }
     }
   
