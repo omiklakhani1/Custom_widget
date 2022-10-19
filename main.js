@@ -26,7 +26,20 @@ var getScriptPromisify = (src) => {
       this.render()
     }
 
-    onCustomWidgetResize (width, height) {
+    onCustomWidgetResize (width, height) {var styles = {
+
+      //*
+          Element: {
+                  margin: "0",
+                  padding: "0"
+          },
+      //#chart-container
+          chartContainerId: {
+                  position: "relative",
+                  height: "100vh",
+                  overflow: "hidden"
+          }
+      }
       this.render()
     }
 
