@@ -1,0 +1,41 @@
+{
+    "eula": "",
+    "vendor": "OMIK",
+    "license": "",
+    "id": "com.sap.sac.sample.echarts.prepared12",
+    "version": "1.0.1",
+    "name": "Stacked Area Chart",
+    "newInstancePrefix": "EChartPrepared12",
+    "description": "A sample custom widget wrapped EChart Prepared",
+    "icon": "https://omiklakhani1.github.io/Custom_widget.github.io/plus.png",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-sap-sample-echarts-prepared",
+        "url": "https://omiklakhani1.github.io/Custom_widget.github.io/StackedAreaChart.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {
+          "width": {
+              "type": "integer",
+              "default": 600
+          },
+          "height": {
+              "type": "integer",
+              "default": 420
+          }
+    },
+    "methods": {
+        "render": {
+        "description": "Render",
+        "parameters": []
+                    }
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the Boxx."
+          }
+    }
+  }
