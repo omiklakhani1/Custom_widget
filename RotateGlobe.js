@@ -124,5 +124,5 @@ var getScriptPromisify = (src) => {
         chart.appear(1000, 100);
       }
     }
-    customElements.define('com-sap-sample-RotateGlobe-prepared', SamplePrepared2)
+    customElements.define('com-sap-sample-RotateGlobe', SamplePrepared2)
   })()
