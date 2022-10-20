@@ -1,0 +1,44 @@
+{
+	"eula": "",
+	"vendor": "OMIK",
+	"license": "",
+	"id": "com.sap.sac.sample.linegraph.prepared",
+	"version": "1.0.1",
+	"name": "linegraph",
+	"newInstancePrefix": "linegraph",
+	"icon": "https://omiklakhani1.github.io/Custom_widget.github.io/lineee.png",
+	"description": "linegraph",
+	"webcomponents": [
+	  {
+		"kind": "main",
+		"tag": "com-sap-sample-linegraph-prepared",
+		"url": "https://omiklakhani1.github.io/Custom_widget.github.io/linegraph.js",
+		"integrity": "",
+		"ignoreIntegrity": true
+	  }
+	 
+	],
+	
+	"properties": {
+		  "width": {"type": "integer","default": 600},
+		  "height": {"type": "integer","default": 420 }
+	},
+
+	"methods": {
+				"render":{
+							"description": "Render",
+							"parameters":[]
+					}
+				
+					},
+		
+				
+					"events": {
+						"onClick": {
+									 "description": "Called when the user clicks the Box."
+								   }
+								   
+								   
+				}
+	  }		  
+				
