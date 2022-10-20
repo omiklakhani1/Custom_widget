@@ -9,7 +9,7 @@ var getScriptPromisify = (src) => {
     //Chart Block in HTML
     const prepared = document.createElement('template')
     prepared.innerHTML = `
-        <div id="root" style="width: 100%; height: 500px;">
+        <div id="root" style="width: 100%; height: 500px;max-width: 100%;">
         </div>
       `
     //Main JS Class holds methods to be called
