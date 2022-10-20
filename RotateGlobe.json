@@ -2,7 +2,7 @@
 	"eula": "",
 	"vendor": "OMIK",
 	"license": "",
-	"id": "com.sap.sac.sample.RotateGlobe",
+	"id": "com.sap.sac.sample.RotateGlobe.prepared",
 	"version": "1.0.0",
 	"name": "RotateGlobe",
 	"newInstancePrefix": "RotateGlobe",
