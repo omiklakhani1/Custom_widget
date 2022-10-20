@@ -80,7 +80,7 @@ date.setHours(0, 0, 0, 0);
 var value = 100;
 
 function generateData() {
-  value = Math.round((Math.random() * 10 - 5) + value);
+  value = Math.round((Math.random() * 15 - 5) + value);
   am5.time.add(date, "day", 1);
   return {
     date: date.getTime(),
