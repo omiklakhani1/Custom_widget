@@ -1,0 +1,47 @@
+{
+	"eula": "",
+	"vendor": "OMIK",
+	"license": "",
+	"id": "com.sap.sac.sample.RotateGlobe",
+	"version": "1.0.0",
+	"name": "RotateGlobe",
+	"newInstancePrefix": "RotateGlobe",
+	"description": "Called when the user clicks the Box.",
+	"icon": "https://omiklakhani1.github.io/Custom_widget.github.io/RotateGlobe.png",
+	"webcomponents": [
+	  {
+		"kind": "main",
+		"tag": "com-sap-sample-RotateGlobe",
+		"url": "https://omiklakhani1.github.io/Custom_widget.github.io/RotateGlobe.js",
+		"integrity": "",
+		"ignoreIntegrity": true
+	  }
+	 
+	],
+	
+	"properties": {
+		  "width": {"type": "integer","default": 600},
+		  "height": {"type": "integer","default": 420 }
+	},
+
+	"methods": {
+				"render":{
+							"description": "Render",
+							"parameters":[]
+						}
+				
+					},
+		
+				
+					"events": {
+						"onClick": {
+									 "description": "Called when the user clicks the Box."
+								   }
+								   
+								   
+				}
+	  }		  
+				
+
+
+	  
