@@ -89,9 +89,9 @@
 		let timer = null;
 		let script1 = document.createElement('script')
 		timer = setTimeout(function() {
-			script.src = 'https://cdn.amcharts.com/lib/4/charts.js'
-			script.onload = () => {
-				resolve(script)
+			script1.src = 'https://cdn.amcharts.com/lib/4/charts.js'
+			script1.onload = () => {
+				resolve(script1)
 				console.log('loaded charts.js')
 		 }
 		}, delay);
