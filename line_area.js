@@ -172,7 +172,7 @@
 			var series = chart.series.push(new am4charts.LineSeries());
 			series.dataFields.valueY = "value";
 			series.dataFields.dateX = "date";
-			
+			series.stroke = am4core.color("green");
 			series.tooltipText = "{value}"
 	  
 			series.tooltip.pointerOrientation = "vertical";
