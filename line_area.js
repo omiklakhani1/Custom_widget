@@ -68,7 +68,7 @@
   
 	  }
 
-	  onCustomWidgetAfterUpdate() {
+	  onCustomWidgetAfterUpdate(changedProperties) {
 		console.log("onCustomWidgetAfterUpdate")
 		const div = document.createElement('div')
 		div.innerHTML = '<div id="chartdiv" style = "width: 100%; height: 400px;"></div>'
