@@ -167,12 +167,14 @@
 			dateAxis.renderer.minGridDistance = 60;
 	  
 			var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
 	  
 			// Create series
 			var series = chart.series.push(new am4charts.LineSeries());
 			series.dataFields.valueY = "value";
 			series.dataFields.dateX = "date";
-			series.stroke = am4core.color("green");
+			series.xAxis = dateAxis;
+			series.yAxis = valueAxis;
 			series.tooltipText = "{value}"
 	  
 			series.tooltip.pointerOrientation = "vertical";
@@ -180,7 +182,8 @@
 			var series2 = chart.series.push(new am4charts.LineSeries());
 			series2.dataFields.valueY = "value2";
 			series2.dataFields.dateX = "date2";
-			
+			series2.xAxis = dateAxis;
+			series2.yAxis = valueAxis2;
 			series2.stroke = am4core.color("blue");
 			series2.tooltipText = "{value2}"
 	  
