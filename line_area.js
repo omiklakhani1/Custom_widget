@@ -127,7 +127,7 @@
 				finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
 			}
 			for( i = 1 ; i < resultset.length; i=i+1){
-				finaldata.push({ date: resultset[i].date.id, value2: resultset[i]["@MeasureDimension"].rawValue});
+				finaldata.push({ date2: resultset[i].date.id, value2: resultset[i]["@MeasureDimension"].rawValue});
 			}
 	
 			// for(var i = 0 ; i < resultset.length; i++){
@@ -179,9 +179,9 @@
 
 			var series2 = chart.series.push(new am4charts.LineSeries());
 			series2.dataFields.valueY = "value2";
-			series2.dataFields.dateX = "date";
+			series2.dataFields.dateX = "date2";
 			
-			series2.stroke = am4core.color("#00ff00");
+			series2.stroke = am4core.color("#ff0000");
 			series2.tooltipText = "{value2}"
 	  
 			series2.tooltip.pointerOrientation = "vertical";
