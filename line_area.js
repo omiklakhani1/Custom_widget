@@ -181,7 +181,7 @@
 			series2.dataFields.valueY = "value2";
 			series2.dataFields.dateX = "date";
 			
-			series2.stroke = am4core.color("#ff0000");
+			series2.stroke = am4core.color("#00ff00");
 			series2.tooltipText = "{value2}"
 	  
 			series2.tooltip.pointerOrientation = "vertical";
