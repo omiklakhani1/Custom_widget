@@ -126,7 +126,7 @@
 			for( var i = 0 ; i < 50; i=i+1){
 				finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
 			}
-			for( i = 1 ; i < 50; i=i+1){
+			for( i = 51 ; i < 100; i=i+1){
 				finaldata.push({ date2: resultset[i].date.id, value2: resultset[i]["@MeasureDimension"].rawValue});
 			}
 	
@@ -175,6 +175,7 @@
 			series.dataFields.dateX = "date";
 			series.xAxis = dateAxis;
 			series.yAxis = valueAxis;
+			series2.stroke = am4core.color("green");
 			series.tooltipText = "{value}"
 	  
 			series.tooltip.pointerOrientation = "vertical";
