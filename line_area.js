@@ -85,7 +85,7 @@
 	
 	// })
 //   }
-		let delay = 1000;
+		let delay = 100;
 		let timer = null;
 		let script1 = document.createElement('script')
 		timer = setTimeout(function() {
