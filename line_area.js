@@ -1,8 +1,8 @@
-var getScriptPromisify = (src) => {
-	return new Promise(resolve => {
-	  $.getScript(src, resolve)
-	})
-  }
+// var getScriptPromisify = (src) => {
+// 	return new Promise(resolve => {
+// 	  $.getScript(src, resolve)
+// 	})
+//   }
   
   (function () {
   
@@ -35,18 +35,68 @@ var getScriptPromisify = (src) => {
 		// this.render(this._S2)
   
 	  }
-  
+
+	  onCustomWidgetAfterUpdate() {
+		console.log("onCustomWidgetAfterUpdate")
+		const div = document.createElement('div')
+		div.innerHTML = '<div id="chartdiv" style = "width: 100%; height: 400px;"></div>'
+		this._shadowRoot.appendChild(div)
+	
+	new Promise(resolve => {
+		let script = document.createElement('script')
+		script.src = 'https://cdn.amcharts.com/lib/4/core.js'
+		script.onload = () => {
+				resolve(script)
+				console.log('loaded core.js')
+		}
+		this._shadowRoot.appendChild(script)
+	
+	// })
+//   }
+		let delay = 1000;
+		let timer = null;
+		let script1 = document.createElement('script')
+		timer = setTimeout(function() {
+			script.src = 'https://cdn.amcharts.com/lib/4/charts.js'
+			script.onload = () => {
+				resolve(script)
+				console.log('loaded charts.js')
+		 }
+		}, delay);
+		this._shadowRoot.appendChild(script1)
+	})
+
+	new Promise(resolve => {
+		let script = document.createElement('script')
+		script.src = 'https://cdn.amcharts.com/lib/4/themes/animated.js'
+		script.onload = () => {
+				resolve(script)
+				console.log('loaded animated.js')
+		}
+		this._shadowRoot.appendChild(script)
+	})
+
+}
+
+
 	  //render() method to plot chart - resultSet1 holds data from SAC table/chart.
 	  async render(resultset) {
-		await getScriptPromisify('https://cdn.amcharts.com/lib/4/core.js');
-		await getScriptPromisify('https://cdn.amcharts.com/lib/4/themes/animated.js');
-		await getScriptPromisify('https://cdn.amcharts.com/lib/4/charts.js');
+
+
+
+		// await getScriptPromisify('https://cdn.amcharts.com/lib/4/core.js');
+		// await getScriptPromisify('https://cdn.amcharts.com/lib/4/themes/animated.js');
+		// await getScriptPromisify('https://cdn.amcharts.com/lib/4/charts.js');
 
 		var finaldata = [];
 
 		for(var i = 0 ; i < resultset.length; i++){
-			finaldata.push({ date: resultset[i].value.id, value: resultset[i]["@MeasureDimension"].rawValue});
+			finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
 		}
+
+		// for(var i = 0 ; i < resultset.length; i++){
+		// 	finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
+		// }
 
 		console.log(resultset);
        
@@ -60,6 +110,9 @@ var getScriptPromisify = (src) => {
 		
 		var chart = am4core.create(this._root, am4charts.XYChart);
   
+		// for(var i = 0 ; i < resultset.length; i++){
+			// finaldata.push({ date: resultset[i].Ship_Date.id, value: resultset[i]["@MeasureDimension"].rawValue});
+		// }
 		
 		// var data = [];
 		// var value = 50;
@@ -93,6 +146,8 @@ var getScriptPromisify = (src) => {
   
   
 	  }
-	}
-	customElements.define('com-sap-sample-linearea-prepared', SamplePrepared)
-  })()
+	
+	
+  }
+  customElements.define('com-sap-sample-linearea-prepared', SamplePrepared)
+})()
