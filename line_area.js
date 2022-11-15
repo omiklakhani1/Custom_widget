@@ -122,7 +122,8 @@
 
 		var mychartdiv =  this._shadowRoot.getElementById('chartdiv')
 
-		am4core.ready(function() {	var finaldata = [];
+// 		am4core.ready(function() {	
+			var finaldata = [];
 
 			for(var i = 0 ; i < resultset.length; i++){
 				finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
@@ -179,7 +180,7 @@
 			chart.cursor.xAxis = dateAxis;
 	  
 
-		});
+// 		});
 	
 		
 
