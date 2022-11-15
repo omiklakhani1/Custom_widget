@@ -172,6 +172,7 @@
 			var series = chart.series.push(new am4charts.LineSeries());
 			series.dataFields.valueY = "value";
 			series.dataFields.dateX = "date";
+			
 			series.tooltipText = "{value}"
 	  
 			series.tooltip.pointerOrientation = "vertical";
@@ -179,6 +180,8 @@
 			var series2 = chart.series.push(new am4charts.LineSeries());
 			series2.dataFields.valueY = "value2";
 			series2.dataFields.dateX = "date";
+			
+			series2.stroke = am4core.color("#ff0000");
 			series2.tooltipText = "{value2}"
 	  
 			series2.tooltip.pointerOrientation = "vertical";
