@@ -138,7 +138,7 @@
 	
 			
 			// Themes begin
-			am4core.useTheme(am4themes_animated);
+// 			am4core.useTheme(am4themes_animated);
 			// Themes end
 			
 			
