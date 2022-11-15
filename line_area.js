@@ -142,7 +142,7 @@
 			// Themes end
 			
 			
-			var chart = am4core.create(this._root, am4charts.XYChart);
+			var chart = am4core.create(mychartdiv, am4charts.XYChart);
 	  
 			// for(var i = 0 ; i < resultset.length; i++){
 				// finaldata.push({ date: resultset[i].Ship_Date.id, value: resultset[i]["@MeasureDimension"].rawValue});
