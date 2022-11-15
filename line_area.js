@@ -68,7 +68,7 @@
   
 	  }
 
-	  onCustomWidgetAfterUpdate(changedProperties) {
+	  onCustomWidgetAfterUpdate() {
 		console.log("onCustomWidgetAfterUpdate")
 		const div = document.createElement('div')
 		div.innerHTML = '<div id="chartdiv" style = "width: 100%; height: 400px;"></div>'
@@ -85,13 +85,13 @@
 	
 	// })
 //   }
-		let delay = 100;
+		let delay = 1000;
 		let timer = null;
 		let script1 = document.createElement('script')
 		timer = setTimeout(function() {
-			script1.src = 'https://cdn.amcharts.com/lib/4/charts.js'
-			script1.onload = () => {
-				resolve(script1)
+			script.src = 'https://cdn.amcharts.com/lib/4/charts.js'
+			script.onload = () => {
+				resolve(script)
 				console.log('loaded charts.js')
 		 }
 		}, delay);
@@ -122,11 +122,12 @@
 
 		var mychartdiv =  this._shadowRoot.getElementById('chartdiv')
 
-// 		am4core.ready(function() {	
-			var finaldata = [];
-
-			for(var i = 0 ; i < resultset.length; i++){
+		am4core.ready(function() {	var finaldata = [];
+			for( i = 0 ; i < resultset.length; i=i+1){
 				finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
+			}
+			for( i = 1 ; i < resultset.length; i=i+1){
+				finaldata.push({ date: resultset[i].date.id, value2: resultset[i]["@MeasureDimension"].rawValue});
 			}
 	
 			// for(var i = 0 ; i < resultset.length; i++){
@@ -134,16 +135,16 @@
 			// }
 	
 			console.log(resultset);
-		   
+		   	console.log("finaldata");
 			console.log(finaldata);
 	
 			
 			// Themes begin
-// 			am4core.useTheme(am4themes_animated);
+			am4core.useTheme(am4themes_animated);
 			// Themes end
 			
 			
-			var chart = am4core.create(mychartdiv, am4charts.XYChart);
+			var chart = am4core.create(this._root, am4charts.XYChart);
 	  
 			// for(var i = 0 ; i < resultset.length; i++){
 				// finaldata.push({ date: resultset[i].Ship_Date.id, value: resultset[i]["@MeasureDimension"].rawValue});
@@ -180,7 +181,7 @@
 			chart.cursor.xAxis = dateAxis;
 	  
 
-// 		});
+		});
 	
 		
 
