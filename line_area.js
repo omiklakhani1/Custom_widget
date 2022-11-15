@@ -175,7 +175,7 @@
 			series.dataFields.dateX = "date";
 			series.xAxis = dateAxis;
 			series.yAxis = valueAxis;
-			series2.stroke = am4core.color("green");
+			series.stroke = am4core.color("green");
 			series.tooltipText = "{value}"
 	  
 			series.tooltip.pointerOrientation = "vertical";
