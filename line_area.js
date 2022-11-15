@@ -4,7 +4,7 @@
 // 	})
 //   }
   
-  (function () {
+(function () {
   
 	//Chart Block in HTML
 	const prepared = document.createElement('template')
@@ -140,7 +140,7 @@
 	
 			
 			// Themes begin
-			am4core.useTheme(am4themes_animated);
+			// am4core.useTheme(am4themes_animated);
 			// Themes end
 			
 			
@@ -175,9 +175,18 @@
 			series.tooltipText = "{value}"
 	  
 			series.tooltip.pointerOrientation = "vertical";
+
+			var series2 = chart.series.push(new am4charts.LineSeries());
+			series2.dataFields.valueY = "value2";
+			series2.dataFields.dateX = "date";
+			series2.tooltipText = "{value2}"
+	  
+			series2.tooltip.pointerOrientation = "vertical";
 	  
 			chart.cursor = new am4charts.XYCursor();
 			chart.cursor.snapToSeries = series;
+			
+			chart.cursor.snapToSeries = series2;
 			chart.cursor.xAxis = dateAxis;
 	  
 
