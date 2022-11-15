@@ -191,9 +191,9 @@
 			series2.tooltip.pointerOrientation = "vertical";
 	  
 			chart.cursor = new am4charts.XYCursor();
-			chart.cursor.snapToSeries = series;
+// 			chart.cursor.snapToSeries = series;
 			
-			chart.cursor.snapToSeries = series2;
+// 			chart.cursor.snapToSeries = series2;
 			chart.cursor.xAxis = dateAxis;
 	  
 
