@@ -123,10 +123,10 @@
 		var mychartdiv =  this._shadowRoot.getElementById('chartdiv')
 
 		am4core.ready(function() {	var finaldata = [];
-			for( var i = 0 ; i < resultset.length; i=i+1){
+			for( var i = 0 ; i < 50; i=i+1){
 				finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
 			}
-			for( i = 1 ; i < resultset.length; i=i+1){
+			for( i = 1 ; i < 50; i=i+1){
 				finaldata.push({ date2: resultset[i].date.id, value2: resultset[i]["@MeasureDimension"].rawValue});
 			}
 	
