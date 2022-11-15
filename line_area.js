@@ -85,13 +85,13 @@
 	
 	// })
 //   }
-		let delay = 1000;
+		let delay = 100;
 		let timer = null;
 		let script1 = document.createElement('script')
 		timer = setTimeout(function() {
-			script.src = 'https://cdn.amcharts.com/lib/4/charts.js'
-			script.onload = () => {
-				resolve(script)
+			script1.src = 'https://cdn.amcharts.com/lib/4/charts.js'
+			script1.onload = () => {
+				resolve(script1)
 				console.log('loaded charts.js')
 		 }
 		}, delay);
@@ -144,7 +144,7 @@
 			// Themes end
 			
 			
-			var chart = am4core.create(this._root, am4charts.XYChart);
+			var chart = am4core.create(mychartdiv, am4charts.XYChart);
 	  
 			// for(var i = 0 ; i < resultset.length; i++){
 				// finaldata.push({ date: resultset[i].Ship_Date.id, value: resultset[i]["@MeasureDimension"].rawValue});
