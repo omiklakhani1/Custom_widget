@@ -124,19 +124,27 @@ cursor.lineY.set("visible", false);
        console.log("finaldata");
     console.log(finaldata);
     
-
+    chart.data = finaldata;
+	
+    // Create axes
+    var dateAxis = chart.xAxes.push(new am5charts.DateAxis());
+    dateAxis.renderer.minGridDistance = 60;
+  
+    var valueAxis = chart.yAxes.push(new am5charts.ValueAxis());
+    var valueAxis2 = chart.yAxes.push(new am5charts.ValueAxis());
+  
 
 // // Create axes
 // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
-baseInterval: { timeUnit: "day", count: 1 },
-renderer: am5xy.AxisRendererX.new(root, {}),
-tooltip: am5.Tooltip.new(root, {})
-}));
+// var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
+// baseInterval: { timeUnit: "day", count: 1 },
+// renderer: am5xy.AxisRendererX.new(root, {}),
+// tooltip: am5.Tooltip.new(root, {})
+// }));
 
-var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-renderer: am5xy.AxisRendererY.new(root, {})
-}));
+// var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+// renderer: am5xy.AxisRendererY.new(root, {})
+// }));
 
 // Add series
 // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
@@ -168,7 +176,7 @@ chart.set("scrollbarX", am5.Scrollbar.new(root, {
 orientation: "horizontal"
 }));
 
-var data = resultset(550);
+var data = resultset(10);
 series.data.setAll(data);
 
 // Make stuff animate on load
