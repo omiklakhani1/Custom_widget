@@ -36,7 +36,7 @@ var getScriptPromisify = (src) => {
       }
   
       //render() method to plot chart - resultSet1 holds data from SAC table/chart.
-      async render() {
+      async render(resultset) {
         await getScriptPromisify('https://cdn.amcharts.com/lib/5/index.js');
         await getScriptPromisify('https://cdn.amcharts.com/lib/5/xy.js');
         // await getScriptPromisify('https://cdn.amcharts.com/lib/5/radar.js');       
@@ -88,31 +88,44 @@ cursor.lineY.set("visible", false);
 
 
 // Generate random data
-var date = new Date();
-date.setHours(0, 0, 0, 0);
-var value = 100;
+// var date = new Date();
+// date.setHours(0, 0, 0, 0);
+// var value = 100;
 
-function generateData() {
-  value = Math.round((Math.random() * 10 - 5) + value);
+// function generateData() {
+//   value = Math.round((Math.random() * 10 - 5) + value);
 
-  if (value < 10) {
-    value = 10;
-  }
+//   if (value < 10) {
+//     value = 10;
+//   }
 
-  am5.time.add(date, "day", 1);
-  return { date: date.getTime(), value: value };
-}
+//   am5.time.add(date, "day", 1);
+//   return { date: date.getTime(), value: value };
+// }
 
-function generateDatas(count) {
-  var data = [];
-  for (var i = 0; i < count; ++i) {
-    data.push(generateData());
-  }
-  return data;
-}
+// function generateDatas(count) {
+//   var data = [];
+//   for (var i = 0; i < count; ++i) {
+//     data.push(generateData());
+//   }
+//   return data;
+// }
+          
+          am4core.ready(function() {	var finaldata = [];
+			for( var i = 0 ; i < resultset.length; i=i+1){
+				finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
+			}
+			for( i = 1 ; i < resultset.length; i=i+1){
+				finaldata.push({ date2: resultset[i].date.id, value2: resultset[i]["@MeasureDimension"].rawValue});
+			}
+                                    
+                                    console.log(resultset);
+		   	console.log("finaldata");
+			console.log(finaldata);
+			
 
 
-// Create axes
+// // Create axes
 // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
 var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
   baseInterval: { timeUnit: "day", count: 1 },
@@ -154,7 +167,7 @@ chart.set("scrollbarX", am5.Scrollbar.new(root, {
   orientation: "horizontal"
 }));
 
-var data = generateDatas(50);
+var data = resultset(50);
 series.data.setAll(data);
 
 // Make stuff animate on load
