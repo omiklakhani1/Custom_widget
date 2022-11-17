@@ -101,7 +101,7 @@ cursor.lineY.set("visible", false);
 // }
 
 am5.ready(function() {	var finaldata = [];
-  for( var i = 0 ; i < resultset.length; i=i++){
+  for( var i = 0 ; i < resultset.length; i++){
     finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
   }
     
