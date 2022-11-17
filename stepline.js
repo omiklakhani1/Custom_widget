@@ -100,8 +100,9 @@ cursor.lineY.set("visible", false);
 //   return data;
 // }
 
-am5.ready(function() {	var finaldata = [];
-  for( var i = 0 ; i < resultset.length; i++){
+am5.ready(function() {	
+    var finaldata = [];
+  for( var i = 0 ; i < resultset; i++){
     finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
   }
     
@@ -152,8 +153,8 @@ chart.set("scrollbarX", am5.Scrollbar.new(root, {
   orientation: "horizontal"
 }));
 
-var data = generateDatas(50);
-series.data.setAll(data);
+// var data = generateDatas(50);
+// series.data.setAll(data);
 
 // Make stuff animate on load
 // https://www.amcharts.com/docs/v5/concepts/animations/
