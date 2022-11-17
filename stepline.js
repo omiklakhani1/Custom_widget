@@ -36,10 +36,10 @@ var getScriptPromisify = (src) => {
       }
   
       //render() method to plot chart - resultSet1 holds data from SAC table/chart.
-      async render() {
+      async render(resultset) {
         await getScriptPromisify('https://cdn.amcharts.com/lib/5/index.js');
         await getScriptPromisify('https://cdn.amcharts.com/lib/5/xy.js');
-        // await getScriptPromisify('https://cdn.amcharts.com/lib/5/radar.js');       
+        await getScriptPromisify('https://cdn.amcharts.com/lib/5/radar.js');       
         await getScriptPromisify('https://cdn.amcharts.com/lib/5/themes/Animated.js');
 
     
@@ -76,30 +76,39 @@ var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
 cursor.lineY.set("visible", false);
 
 
-// Generate random data
-var date = new Date();
-date.setHours(0, 0, 0, 0);
-var value = 100;
+// // Generate random data
+// var date = new Date();
+// date.setHours(0, 0, 0, 0);
+// var value = 100;
 
-function generateData() {
-  value = Math.round((Math.random() * 10 - 5) + value);
+// function generateData() {
+//   value = Math.round((Math.random() * 10 - 5) + value);
 
-  if (value < 10) {
-    value = 10;
+//   if (value < 10) {
+//     value = 10;
+//   }
+
+//   am5.time.add(date, "day", 1);
+//   return { date: date.getTime(), value: value };
+// }
+
+// function generateDatas(count) {
+//   var data = [];
+//   for (var i = 0; i < count; ++i) {
+//     data.push(generateData());
+//   }
+//   return data;
+// }
+
+am5.ready(function() {	var finaldata = [];
+  for( var i = 0 ; i < resultset.length; i=i++){
+    finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
   }
-
-  am5.time.add(date, "day", 1);
-  return { date: date.getTime(), value: value };
-}
-
-function generateDatas(count) {
-  var data = [];
-  for (var i = 0; i < count; ++i) {
-    data.push(generateData());
-  }
-  return data;
-}
-
+    
+                                
+  console.log(resultset);
+  console.log("finaldata");
+  console.log(finaldata);
 
 // Create axes
 // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
@@ -151,7 +160,8 @@ series.data.setAll(data);
 series.appear(1000);
 chart.appear(1000, 100);
   
-      }
-    }
+  });
+}
+}
     customElements.define('com-sap-sample-stepline', SamplePrepared2)
   })()
