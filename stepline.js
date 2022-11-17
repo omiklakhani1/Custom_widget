@@ -112,7 +112,7 @@ cursor.lineY.set("visible", false);
 //   return data;
 // }
         
-        am5core.ready(function() {	var finaldata = [];
+        am5.ready(function() {	var finaldata = [];
     for( var i = 0 ; i < resultset.length; i=i+1){
       finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
     }
