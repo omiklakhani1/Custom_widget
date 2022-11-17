@@ -115,9 +115,9 @@ cursor.lineY.set("visible", false);
 			for( var i = 0 ; i < resultset.length; i=i+1){
 				finaldata.push({ date: resultset[i].date.id, value: resultset[i]["@MeasureDimension"].rawValue});
 			}
-			for( i = 1 ; i < resultset.length; i=i+1){
-				finaldata.push({ date2: resultset[i].date.id, value2: resultset[i]["@MeasureDimension"].rawValue});
-			}
+// 			for( i = 1 ; i < resultset.length; i=i+1){
+// 				finaldata.push({ date2: resultset[i].date.id, value2: resultset[i]["@MeasureDimension"].rawValue});
+// 			}
                                     
                                     console.log(resultset);
 		   	console.log("finaldata");
@@ -167,7 +167,7 @@ chart.set("scrollbarX", am5.Scrollbar.new(root, {
   orientation: "horizontal"
 }));
 
-var data = resultset(50);
+var data = resultset(550);
 series.data.setAll(data);
 
 // Make stuff animate on load
