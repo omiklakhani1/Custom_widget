@@ -11,7 +11,7 @@
          <slot name="content"></slot>
         </div>
   
-        <script id="myView" type="ui5/xmlview">
+        <script id="oView" type="ui5/xmlview">
   <mvc:View controllerName="MyController" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
   xmlns:f="sap.ui.layout.form"
   xmlns:layout="sap.ui.commons.layout">
