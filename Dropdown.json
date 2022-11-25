@@ -11,7 +11,7 @@
     "webcomponents": [
       {
         "kind": "main",
-        "tag": "com-fd-djaja-sap-sac-Dropdown",
+        "tag": "com-fd-d-sap-sac-Dropdown",
         "url": "https://omiklakhani1.github.io/Custom_widget.github.io/Dropdown.js",
         "integrity": "",
         "ignoreIntegrity": true
