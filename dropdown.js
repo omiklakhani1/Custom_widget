@@ -11,24 +11,25 @@
          <slot name="content"></slot>
         </div>
   
-        <script id="oView" name="oView" type="sapui5/xmlview">
-            <mvc:View
-          controllerName="myView.Template"
-        xmlns:l="sap.ui.layout"
-        xmlns:mvc="sap.ui.core.mvc"
-        xmlns="sap.m">
-        <l:VerticalLayout
-          class="sapUiContentPadding"
-          width="100%">
-          <l:content>
-            <Input
-              id="passwordInput"
-              type="Password"
-              placeholder="Enter password ..." liveChange="onButtonPress"/>
-          </l:content>
-        </l:VerticalLayout>
-      </mvc:View>
-        </script>        
+        <script id="myView" type="ui5/xmlview">
+  <mvc:View controllerName="MyController" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:layout="sap.ui.commons.layout">
+
+    <Tree id="Tree" items="{path: '/'}" selectionChange="onSelect"
+  mode="MultiSelect" includeItemInSelection="true">
+    <headerToolbar>
+    <OverflowToolbar>
+    <Select id="theList" selectedKey="dec" > <items>         
+      <core:Item key="id" text="Id" /><core:Item key="dec" text="Description" /><core:Item key="id-dec" text="Id-Description" /> </items></Select>
+        <Input placeholder="Type to search"/>
+  </OverflowToolbar>
+  </headerToolbar>
+  <StandardTreeItem title="{text}" selected="{selected}"/>
+  </Tree>
+
+  </mvc:View>
+</script>   
     `;
   
     class dropdown extends HTMLElement {
