@@ -1,5 +1,5 @@
 {
-    "id": "com.fd.d.sap.sac.Dropdown",
+    "id": "com.om.sap.sac.Dropdown",
     "version": "1.0.1",
     "name": "Dropdown",
     "description": "Dropdown",
@@ -11,7 +11,7 @@
     "webcomponents": [
       {
         "kind": "main",
-        "tag": "com-fd-d-sap-sac-Dropdown",
+        "tag": "com-om-sap-sac-Dropdown",
         "url": "https://omiklakhani1.github.io/Custom_widget.github.io/Dropdown.js",
         "integrity": "",
         "ignoreIntegrity": true
