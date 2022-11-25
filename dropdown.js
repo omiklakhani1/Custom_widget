@@ -31,7 +31,7 @@
         </script>        
     `;
   
-    class Dropdown extends HTMLElement {
+    class dropdown extends HTMLElement {
   
       constructor() {
         super();
@@ -180,7 +180,7 @@
       }
   
     }
-    customElements.define("com-om-sap-sac-Dropdown", Dropdown);
+    customElements.define("com-om-sap-sac-dropdown", dropdown);
   
     // UTILS
     function loadthis(that) {
