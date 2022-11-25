@@ -180,7 +180,7 @@
       }
   
     }
-    customElements.define("com-fd-d-sap-sac-Dropdown", Dropdown);
+    customElements.define("com-om-sap-sac-Dropdown", Dropdown);
   
     // UTILS
     function loadthis(that) {
