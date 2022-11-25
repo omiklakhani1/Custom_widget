@@ -1,9 +1,9 @@
 {
-    "id": "com.om.sap.sac.Dropdown",
+    "id": "com.om.sap.sac.dropdown",
     "version": "1.0.1",
     "name": "Dropdown",
     "description": "Dropdown",
-    "newInstancePrefix": "Dropdown",
+    "newInstancePrefix": "dropdown",
     "vendor": "OMIK",
     "eula": "",
     "license": "",
@@ -11,8 +11,8 @@
     "webcomponents": [
       {
         "kind": "main",
-        "tag": "com-om-sap-sac-Dropdown",
-        "url": "https://omiklakhani1.github.io/Custom_widget.github.io/Dropdown.js",
+        "tag": "com-om-sap-sac-dropdown",
+        "url": "https://omiklakhani1.github.io/Custom_widget.github.io/dropdown.js",
         "integrity": "",
         "ignoreIntegrity": true
       }
